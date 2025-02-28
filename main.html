@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main page of payo</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-900 ">
+    
+    <section class="max-w-md min-h-screen mx-auto bg-slate-100 ">
+        <header class="p-6">
+            <nav class="flex items-center justify-between">
+                <div class="flex justify-center items-center gap-4 ">
+                    <img class="w-16" src="./assets/Group.png" alt="">                
+                    <div>
+                        <h1 class="text-3xl font-bold">$ <span id="main-balance">45000</span></h1>
+                        <p class="text-gray-500 font-bold mt-2">Available Balance</p>
+                
+                    </div>
+                </div>
+                <button class="btn btn-primary bg-white text-black">Logout</button>
+            </nav>
+        </header>
+        <hr class="mt-8 w-full">
+        <section class="mt-16 p-6">
+            <h1 class="text-3xl font-bold">
+                🔥Welcome to Payooo!
+            </h1>
+            <p class="mt-5">
+                Enjoy easy and convenient financial services with us. Cashout charge is low and 
+            </p>
+            <div class="grid grid-cols-3 gap-2 mt-10">
+                <div id="money-add" class="border p-4 rounded-md shadow-2xl">
+                    <img class="w-8 mx-auto" src="./assets/wallet1.png" alt="">
+                    <h2 class=" text-center ">Add Money</h2>
+                </div>
+                <div class="border p-4 rounded-md shadow-2xl">
+                    <img class="w-8 mx-auto" src="./assets/send1.png" alt="">
+                    <h2 id="cash-out" class=" text-center ">Cashout</h2>
+                </div>
+                <div class="border pt-4 rounded-md shadow-2xl">
+                    <img class="w-8 mx-auto" src="./assets/money1.png" alt="">
+                    <h2 class=" text-center text-sm ">Transfer Money</h2>
+                </div>
+                <div class="border p-4 rounded-md shadow-2xl">
+                    <img class="w-8 mx-auto" src="./assets/bonus1.png" alt="">
+                    <h2 class=" text-center ">Add Money</h2>
+                </div>
+                <div class="border p-4 rounded-md shadow-2xl">
+                    <img class="w-8 mx-auto" src="./assets/purse1.png" alt="">
+                    <h2 class="text-center ">Add Money</h2>
+                </div>
+                <div class="border p-4 rounded-md shadow-2xl">
+                    <img class="w-8 mx-auto" src="./assets/transaction1.png" alt="">
+                    <h2 class=" text-center ">Add Money</h2>
+                </div>
+            </div>
+        </section>
+        <section id="addMoney">
+            <h2 class="text-3xl font-bold mt-5 pl-6">Add Money</h2>
+            <div class="card bg-base-100 w-full max-w-md shrink-0 shadow-2xl mt-5">
+                <form class="card-body">
+                    <legend>
+                        Select A Bank
+                    </legend>
+                    <select class="select select-info w-full max-w-xs">
+                        <option disabled selected>Select Bank</option>
+                        <option value="Bkash">Bkash</option>
+                        <option value="Bkash">Nagad</option>
+                        <option value="DBBl">DBBL</option>
+                        <option value="Rocket">Rocket</option>
+                        <option value="Upay">Upay</option>
+                        <option value="CellFin">CellFin</option>
+                        <option value="Sure-Cash">Sure-Cash</option>
+                        <option value="Sonali Sheba">Sonali Sheba</option>
+                      </select>
+                  <fieldset class="fieldset">
+                    <label class="fieldset-label">Account Number</label>
+                    <input value="12345678910" id="Account-number" type="number" class="input" placeholder="Ac Number" required />
+                    <label class="fieldset-label">Amount to Add</label>
+                    <input  id="Add-Amount" type="number" class="input" placeholder="Add Amount to withdrow" required />
+                    <label class="fieldset-label">Password</label>
+                    <input value="" id="pass-key" type="password" class="input" placeholder="Password" required />
+                    <div><a class="link link-hover">Forgot password?</a></div>
+                    <button id="add-money" id="login-btn" class="btn btn-neutral mt-4 bg-blue-600">Add Money</button>
+                  </fieldset>
+                </form>
+            </div>
+        </section>
+        <section id="cashOut" class="bg-slate-100  mt-10">
+            <h2 class="text-3xl font-bold mt-5 pl-6 text-center">CashOut</h2>
+            <div class="card bg-base-100 w-full max-w-md shrink-0 shadow-2xl mt-5">
+                <form class="card-body">
+                    
+                  <fieldset class="fieldset">
+                    <label class="fieldset-label">Account Number</label>
+                    <input value="12345678910" id="Account-number" type="number" class="input" placeholder="Ac Number" required />
+                    <label class="fieldset-label">Amount</label>
+                    <input  id="cashout" type="number" class="input" placeholder="Amount to withdrow" required />
+                    <label class="fieldset-label">Password</label>
+                    <input value="1234" id="pass-key" type="password" class="input" placeholder="Password" required />
+                    <div><a class="link link-hover">Forgot password?</a></div>
+                    <button id="cashout-btn" class="btn btn-neutral mt-4 bg-blue-600">CashOut</button>
+                  </fieldset>
+                </form>
+            </div>
+        </section>
+    </section>
+
+    <script src="./script/main.js"></script>
+    <script src="./script/toggle.js"></script>
+    <script src="./script/cashOut.js"></script>
+</body> 
+</html>
